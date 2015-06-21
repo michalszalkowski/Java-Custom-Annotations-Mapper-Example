@@ -1,10 +1,12 @@
 package entities;
 
-import lib.pl.btbw.mapper.sparrow.annotation.BtListProperty;
-import lib.pl.btbw.mapper.sparrow.annotation.BtObjectProperty;
-import lib.pl.btbw.mapper.sparrow.annotation.BtStringProperty;
+import lib.pl.btbw.mapper.siskin.annotation.SetListProperty;
+import lib.pl.btbw.mapper.siskin.annotation.SetObjectProperty;
+import lib.pl.btbw.mapper.siskin.annotation.SetStringProperty;
+import lib.pl.btbw.mapper.sparrow.annotation.GetListProperty;
+import lib.pl.btbw.mapper.sparrow.annotation.GetObjectProperty;
+import lib.pl.btbw.mapper.sparrow.annotation.GetStringProperty;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Article {
@@ -15,44 +17,58 @@ public class Article {
 
 	private Category category;
 
-	private List<Section> sections = new ArrayList<>();
+	private List<Section> sections;
 
 	public Article() {
 	}
 
-	@BtStringProperty(name = "TITLE")
+	@GetStringProperty(name = "TITLE")
 	public String getTitle() {
 		return title;
 	}
 
+	@SetStringProperty(name = "TITLE")
 	public void setTitle(String title) {
 		this.title = title;
 	}
 
-	@BtStringProperty(name = "TYPE")
+	@GetStringProperty(name = "TYPE")
 	public int getType() {
 		return type;
 	}
 
+	@SetStringProperty(name = "TYPE")
 	public void setType(int type) {
 		this.type = type;
 	}
 
-	@BtObjectProperty(name = "CATEGORY")
+	@GetObjectProperty(name = "CATEGORY")
 	public Category getCategory() {
 		return category;
 	}
 
+	@SetObjectProperty(name = "CATEGORY")
 	public void setCategory(Category category) {
 		this.category = category;
 	}
 
-	@BtListProperty(name = "SECTIONS")
+	@GetListProperty(name = "SECTIONS")
 	public List<Section> getSections() {
 		return sections;
 	}
 
+	@SetListProperty(name = "SECTIONS", type = Section.class)
 	public void setSections(List<Section> sections) {
 		this.sections = sections;
+	}
+
+	@Override
+	public String toString() {
+		return "Article{" +
+				"title='" + title + '\'' +
+				", type=" + type +
+				", category=" + category +
+				", sections=" + sections +
+				'}';
 	}
 }

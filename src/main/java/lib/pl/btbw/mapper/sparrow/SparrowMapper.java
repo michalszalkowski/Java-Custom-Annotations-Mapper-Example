@@ -1,8 +1,8 @@
 package lib.pl.btbw.mapper.sparrow;
 
-import lib.pl.btbw.mapper.sparrow.annotation.BtListProperty;
-import lib.pl.btbw.mapper.sparrow.annotation.BtObjectProperty;
-import lib.pl.btbw.mapper.sparrow.annotation.BtStringProperty;
+import lib.pl.btbw.mapper.sparrow.annotation.GetListProperty;
+import lib.pl.btbw.mapper.sparrow.annotation.GetObjectProperty;
+import lib.pl.btbw.mapper.sparrow.annotation.GetStringProperty;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
@@ -12,10 +12,6 @@ import java.util.List;
 import java.util.Map;
 
 public class SparrowMapper {
-
-	public SparrowMapper() {
-
-	}
 
 	public Map<String, Object> asMap(Object obj) {
 		return objToMap(obj);
@@ -40,7 +36,7 @@ public class SparrowMapper {
 
 	private void getStringProperty(Object obj, Map<String, Object> map, Method method) {
 
-		BtStringProperty annotation = method.getAnnotation(BtStringProperty.class);
+		GetStringProperty annotation = method.getAnnotation(GetStringProperty.class);
 
 		if (annotation != null) {
 
@@ -53,7 +49,7 @@ public class SparrowMapper {
 
 	private void getObjectProperty(Object obj, Map<String, Object> map, Method method) {
 
-		BtObjectProperty annotation = method.getAnnotation(BtObjectProperty.class);
+		GetObjectProperty annotation = method.getAnnotation(GetObjectProperty.class);
 
 		if (annotation != null) {
 
@@ -71,7 +67,7 @@ public class SparrowMapper {
 
 	private void getListProperty(Object obj, Map<String, Object> map, Method method) {
 
-		BtListProperty annotation = method.getAnnotation(BtListProperty.class);
+		GetListProperty annotation = method.getAnnotation(GetListProperty.class);
 
 		if (annotation != null) {
 
