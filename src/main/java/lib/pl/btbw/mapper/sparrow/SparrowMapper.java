@@ -1,8 +1,8 @@
-package lib.pl.btbw.mapper;
+package lib.pl.btbw.mapper.sparrow;
 
-import lib.pl.btbw.mapper.annotation.BtListProperty;
-import lib.pl.btbw.mapper.annotation.BtObjectProperty;
-import lib.pl.btbw.mapper.annotation.BtStringProperty;
+import lib.pl.btbw.mapper.sparrow.annotation.BtListProperty;
+import lib.pl.btbw.mapper.sparrow.annotation.BtObjectProperty;
+import lib.pl.btbw.mapper.sparrow.annotation.BtStringProperty;
 
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;

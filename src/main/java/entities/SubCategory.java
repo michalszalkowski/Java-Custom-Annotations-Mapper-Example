@@ -1,6 +1,6 @@
 package entities;
 
-import lib.pl.btbw.mapper.annotation.BtStringProperty;
+import lib.pl.btbw.mapper.sparrow.annotation.BtStringProperty;
 
 public class SubCategory {
 

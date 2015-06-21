@@ -1,7 +1,7 @@
 package entities;
 
-import lib.pl.btbw.mapper.annotation.BtObjectProperty;
-import lib.pl.btbw.mapper.annotation.BtStringProperty;
+import lib.pl.btbw.mapper.sparrow.annotation.BtObjectProperty;
+import lib.pl.btbw.mapper.sparrow.annotation.BtStringProperty;
 
 public class Category {
 

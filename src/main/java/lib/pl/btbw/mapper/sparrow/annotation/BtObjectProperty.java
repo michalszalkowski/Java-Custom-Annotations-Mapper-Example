@@ -1,4 +1,4 @@
-package lib.pl.btbw.mapper.annotation;
+package lib.pl.btbw.mapper.sparrow.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -7,6 +7,6 @@ import java.lang.annotation.Target;
 
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD, ElementType.FIELD})
-public @interface BtStringProperty {
+public @interface BtObjectProperty {
 	String name();
 }

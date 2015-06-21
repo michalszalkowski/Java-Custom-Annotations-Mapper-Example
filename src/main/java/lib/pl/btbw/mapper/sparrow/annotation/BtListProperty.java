@@ -1,4 +1,4 @@
-package lib.pl.btbw.mapper.annotation;
+package lib.pl.btbw.mapper.sparrow.annotation;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;

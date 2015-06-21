@@ -1,4 +1,4 @@
-package lib.pl.btbw.mapper;
+package lib.pl.btbw.mapper.sparrow;
 
 import entities.Article;
 import entities.Category;
